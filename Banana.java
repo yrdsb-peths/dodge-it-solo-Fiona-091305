@@ -15,12 +15,16 @@ public class Banana extends Actor
         {
             resetBanana();
         }
-        
+        if(isTouching(hero.class))
+        {
+            // ADD A GAMEOVER SYMBOL
+            getWorld().removeObject(this);
+        }
     }
     public void resetBanana()
     {
         int x = Greenfoot.getRandomNumber(2);
-        if(num == 0)
+        if(int num == 0)
         {
             setLocation(600, 100);
         }
